@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "more-goods": "../../components/moregoods/moregoods"
+  }
+}

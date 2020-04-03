@@ -1,0 +1,7 @@
+<!--components/guidebar/guidebar.wxml-->
+<view class="guide">
+     <navigator class="guider" url="{{backUrl}}">
+    <image class="back_pic" src="/images/back.png"></image>
+     </navigator>
+     <view class="content">{{text}}</view>
+</view>

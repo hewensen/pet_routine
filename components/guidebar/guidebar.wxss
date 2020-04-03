@@ -1,0 +1,17 @@
+/* components/guidebar/guidebar.wxss */
+.content{
+  text-align: center;
+  margin: 0 auto;
+}
+.guider{
+  position: absolute;
+  left: 20rpx;
+  top: 10rpx;
+}
+.back_pic{
+  width: 30rpx;
+  height: 30rpx;
+}
+.guide{
+  
+}

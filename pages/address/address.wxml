@@ -1,0 +1,36 @@
+<!--pages/address/address.wxml-->
+<view class="container">
+  <navbar text="收货地址管理" back="true" home="true"></navbar>
+  <view class="header" bindtap="getAddress">
+    <image class="wechat" src="/images/wechat.png"></image>
+    <text class="tip">获取微信收货地址</text>
+    <image class="right" src="/images/right.png"></image>
+  </view>
+
+  <view class="noorder_wrapper" wx:if="{{list.length==0}}">
+    <view>
+      <image class="noorder_pic" src="/images/m3.png"> </image>
+    </view> 
+    <text>未添加收货地址</text>
+  </view>
+
+  <view wx:for="{{list}}" wx:key="id" class="address_item">
+    <view class="address_basic">{{item.name}},{{item.mobile}}</view>
+    <view class="address_detail">收货地址：{{item.province}}{{item.city}}{{item.region}}{{item.detail}}</view>
+    <navigator url="../../pages/address_edit/address_edit?type=edit&&id={{item.id}}"  >
+      <view class="address_edit">
+        <image src="/images/edit.png"></image>
+      </view>
+    </navigator>
+
+    <view wx:if="{{item.is_default  == 1}}">
+     <image class="default_pic" src="/images/default.png"></image>
+    </view>
+  </view>
+
+  <navigator url="../../pages/address_edit/address_edit?type=add" >
+    <view class="add_btn">
+      新增收货地址
+    </view>
+  </navigator>
+</view>

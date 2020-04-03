@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/order/order",
+    "pages/address/address",
+    "pages/address_edit/address_edit",
+    "pages/shopcar/shopcar",
+    "pages/order_detail/order_detail",
+    "pages/goods_detail/goods_detail",
+    "pages/map/map",
+    "pages/goods/goods",
+    "pages/shop_region/shop_region",
+    "pages/down_order/down_order",
+    "pages/appointment/appointment",
+    "pages/my_appoint/my_appoint",
+    "pages/down_shopcar_order/down_shopcar_order",
+    "pages/order_detail_unpay/order_detail_unpay",
+    "pages/order_detail_payed/order_detail_payed",
+    "pages/order_detail_dele/order_detail_dele",
+    "pages/order_detail_finish/order_detail_finish",
+    "components/ranker/ranker",
+    "pages/evaluate/evaluate"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "navbar": "../../components/navbar/navbar"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "宠物医院",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/main.png",
+        "selectedIconPath": "images/main_selected.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/goods/goods",
+        "iconPath": "images/sort.png",
+        "selectedIconPath": "images/sort_selected.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/shopcar/shopcar",
+        "iconPath": "images/car.png",
+        "selectedIconPath": "images/car_selected.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

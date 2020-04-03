@@ -1,0 +1,41 @@
+<!--pages/address_edit/address_edit.wxml-->
+<view class="container">
+  <navbar text="{{barText}}" back="true" home="true"></navbar>
+  <view class="edit_wrapper">
+    <view class="edit_item">
+      <view class="edit_label">姓名</view>
+      <view class="edit_content">
+        <input class="weui-input" value="{{addressInfo.name}}" placeholder="请输入你的姓名 " bindinput="getNameInput" />
+      </view>
+    </view>
+    <view class="edit_item ">
+      <view class="edit_label ">电话</view>
+      <view class="edit_content ">
+        <input class="weui-input " bindinput="getMobileInput" value="{{addressInfo.mobile}}" placeholder="请输入你的联系电话 " />
+      </view>
+    </view>
+    <view class="edit_item ">
+      <view class="edit_label ">地区</view>
+      <view class="edit_content ">
+        <picker mode="region" bindchange="bindRegionChange">
+          <view class="picker">
+            <view wx:if="{{addressInfo.region.length!=0}}">
+              {{addressInfo.region[0]}}/{{addressInfo.region[1]}}/{{addressInfo.region[2]}}</view>
+            <view wx:if="{{addressInfo.region.length==0}}">
+              请选择</view>
+          </view>
+
+        </picker>
+      </view>
+    </view>
+    <view class="edit_item last">
+      <view class="edit_label">详细地址</view>
+      <view class="edit_content">
+        <textarea value="{{addressInfo.detail}}" bindinput="getDetailInput" class="ps_textarea" placeholder="街道门牌，楼层房间号等信息"></textarea>
+      </view>
+    </view>
+  </view>
+  <view class="ps_btn red" bindtap="addItem"> 保存并使用 </view>
+  <view class="ps_btn set_default" wx:if="{{type=='edit'}}" bindtap="setDefault"> <image src="/images/set_de.png"></image>设为默认地址 </view>
+  <view class="ps_btn" bindtap="deleteItem" wx:if="{{type=='edit'}}"> 删除收货地址 </view>
+</view>

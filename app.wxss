@@ -1,0 +1,26 @@
+/**app.wxss**/
+.container {
+  height: 100%; 
+  padding: 0 0;
+} 
+checkbox .wx-checkbox-input {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  margin-bottom: 4rpx;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: red;
+  border-color: #fff;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

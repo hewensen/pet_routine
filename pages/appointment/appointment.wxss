@@ -1,0 +1,134 @@
+/* pages/appointment/appointment.wxss */
+
+page {
+  background: #f1f1f1;
+}
+
+.inner {
+  padding: 0 30rpx;
+  padding-top: 50rpx;
+}
+
+.date_list {
+  display: flex;
+}
+
+.ps_input {
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+  padding-right: 40rpx;
+}
+
+.date_item {
+  flex: 1;
+  text-align: center;
+  font-size: 25rpx;
+}
+
+.time_list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 50rpx 10rpx 300rpx 10rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+}
+
+.time_item {
+  width: 20%;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.able {
+  color: #000;
+}
+
+.unable {
+  color: #c1c1c1;
+}
+
+.checked {
+  color: red;
+}
+
+.unchecked {
+  color: #c1c1c1;
+}
+
+.chose_service {
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  padding-left: 30rpx;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+
+.book_info {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  background: #fff;
+  font-size: 23rpx;
+  margin-top: 20rpx;
+  padding-left: 30rpx;
+  border-radius: 20rpx;
+}
+
+.book_text {
+  flex: 1;
+  padding-left: 20rpx;
+}
+
+.text {
+  color: red;
+  margin-left: 40rpx;
+}
+
+.next_btn {
+  width: 200rpx;
+  color: #fff;
+  text-align: center;
+  background: red;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.active {
+  background: red;
+  color: #fff;
+}
+
+.icon_pic {
+  position: absolute;
+  left: 10rpx;
+  top: 36rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.item {
+  position: relative;
+  padding-left: 50rpx;
+}
+
+.clock {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-top: 35rpx;
+  margin-right: 14rpx;
+}

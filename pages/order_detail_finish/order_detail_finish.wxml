@@ -1,0 +1,121 @@
+<!--pages/order_detail_payed/order_detail_payed.wxml-->
+<view class="container">
+  <navbar text="已完成订单" back="true" home="true"></navbar>
+  <view class="tip_wrapper">
+    <image class="tip_pic" src="/images/c5.png"></image>
+    <view>
+      <view>买家已确认收货</view>
+      <view>订单已完成，记得去评价哦</view>
+    </view>
+  </view>
+
+  <view class="status_wrapper">
+
+    <view class="text_wrapper">
+      <view class="text_item left">
+        买家付款
+        <view class="circle circle_left">
+          <image class="circle_img_emp" src="/images/circle.png"></image>
+        </view>
+      </view>
+      <view class="text_item middle">
+        卖家发货
+        <view class="circle circle_middle">
+          <image class="circle_img_emp" src="/images/circle.png"></image>
+        </view>
+      </view>
+      <view class="text_item right">
+        交易完成
+        <view class="circle circle_right">
+          <image class="circle_img" src="/images/check_green.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="under_text">
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <view class="address_info">
+    <view class="user_info">
+      <image class="loc_icon" src="/images/posi.png"></image>
+      <text> 收货人：{{orderInfo.dele_name}}</text>
+      <text class="phone">{{orderInfo.dele_phone}}</text>
+    </view>
+    <view class="address_detail">
+      收货地址：{{orderInfo.dele_region}}{{orderInfo.dele_detail}}
+    </view>
+  </view>
+
+  <view class="goods_wrapper" bindtap="showWrapper">
+    <view class="order_item">
+
+      <view class="order_content">
+        <image class="order_pic" src="{{orderInfo.goods_img_url}}"></image>
+        <view class="order_desc">
+          <view class="order_good">{{orderInfo.goods_name}}</view>
+          <view class="order_detail">
+            <view class="order_price">￥{{orderInfo.single_price}}</view>
+            <view class="goods_no">x {{orderInfo.num}}</view>
+          </view>
+        </view>
+
+      </view>
+      <view class="good_asum">
+        商品小计:
+        <text class="price">￥{{orderInfo.all_price-orderInfo.dele_money}}</text>
+      </view>
+
+    </view>
+  </view>
+  <view class="order_deitem">
+    <text class="de_tt">配送方式</text>
+    <view class="de_desc">
+      <view>￥{{orderInfo.dele_money}}</view>
+      <view wx:if="{{orderInfo.dele_type == 1}}">快递发货</view>
+      <view wx:elif="{{orderInfo.dele_type == 2}}">上门自提</view>
+    </view>
+  </view>
+
+  <view class="order_deitem">
+    <text class="de_tt">买家留言</text>
+    <view class="de_desc">
+      <text wx:if="{{orderInfo.message==''}}">无</text>
+      <text wx:else>{{orderInfo.message}}</text>
+    </view>
+  </view>
+  <view class="order_deitem assum">
+    <text class="de_tt assum_tt">商品金额</text>
+    <view class="de_desc">
+      ￥{{orderInfo.all_price-orderInfo.dele_money}}
+    </view>
+  </view>
+  <view class="order_deitem assum">
+    <text class="de_tt assum_tt">运费</text>
+    <view class="de_desc">
+      +￥{{orderInfo.dele_money}}
+    </view>
+  </view>
+
+  <view class="order_deitem pay_way" wx:if="{{orderInfo.status!=1}}">
+    <text class="de_tt">付款方式</text>
+    <view class="de_desc">
+      微信支付
+    </view>
+    <image class="wechat" src="/images/wechat.png"></image>
+  </view>
+
+  <view class="pay_info" wx:if="{{orderInfo.status!=1}}">
+    实付款：
+    <text class="money">￥{{orderInfo.all_price}}</text>
+  </view>
+
+  <view class="orderno_detail">
+    <view class="orderno_item">订单编号：{{orderInfo.trade_no}}</view>
+    <view class="orderno_item">创建时间：{{orderInfo.trade_time}}</view>
+    <view class="orderno_item" wx:if="{{orderInfo.status!=1}}">付款时间：{{orderInfo.pay_time}}</view>
+  </view>
+
+  <more-goods></more-goods>
+</view>

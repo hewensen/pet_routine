@@ -1,0 +1,77 @@
+/* components/region/region.wxss */
+ 
+.region{
+  background: #fff;
+  padding: 20rpx;
+  padding-bottom: 30rpx;
+}
+.region_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold; 
+}
+
+.region_icon {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+}
+
+.goods_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.goods_item {
+  width: calc((100% / 3) - 10rpx);
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.img_box {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.goods_img {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+}
+
+.goods_name {
+  padding-left: 10rpx;
+  margin: 16rpx 0;
+  line-height: 36rpx;
+}
+.region_tt{
+  float: right;
+}
+.goods_price {
+  padding-left: 10rpx;
+  color: red;
+}
+.goods_tt2{
+  font-size: 20rpx;
+  font-weight: normal;
+  margin-top: 6rpx;
+}
+.load_more{
+  width: 98%;
+  margin: 20rpx 1% 0 1%;
+  padding: 14rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 22rpx;
+  color: #777;
+  border-radius: 4rpx;
+  border: 1px solid #777;
+}
+ 

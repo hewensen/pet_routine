@@ -1,0 +1,43 @@
+<!--pages/shopcar/shopcar.wxml-->
+<view class="container">
+  <navbar text="购物车"></navbar>
+  <view class="emp_car" wx:if="{{carList.length==0}}">
+    <view>
+      <image class="car_pic" src="/images/emp_car.png"></image>
+    </view>
+    <view class="emp_tt1">购物车还是空的</view>
+    <view class="emp_tt2">赶紧买点宝贝慰劳一下自己吧</view>
+    <view class="go_btn">去逛逛</view>
+  </view>
+
+  <view class="car_list">
+    <view class="car_item" wx:key="index" wx:for="{{carList}}">
+      <view class="checkbox_wrapper">
+        <checkbox data-index="{{index}}" bindtap="handleTap" checked="{{item.selected}}"></checkbox>
+      </view>
+      <image class="goods_img" src="{{item.head_img_url}}"></image>
+      <view class="goods_content">
+        <view class="goods_tt">{{item.name}}</view>
+        <view class="goods_desc">
+          <text class="money">￥{{item.price}}</text>
+          <view class="counter">
+            <car-counter  bind:numChange="numChange" count="{{item.goods_count}}" cid="{{item.id}}" index="{{index}}"></car-counter>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <more-goods goodsList="{{goodsList}}"></more-goods>
+  <view class="assum_wrapper">
+    <view class="chose_all">
+      <checkbox bindtap="checkAll" checked="{{allChecked}}"></checkbox>全选</view>
+    <view class="assum" bindtap="buyNow">结算</view>
+    <view class="assum_content">
+      <view class="money_wrapper">
+        <text>合计:</text>
+        <text class="ass_money">￥{{toTalPrice}}</text>
+      </view>
+      <view class="assum_tip">不含运费</view>
+    </view> 
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "car-counter": "../../components/counter/counter",
+    "more-goods": "../../components/moregoods/moregoods"
+  },
+  "navigationBarTitleText": "购物车"
+}

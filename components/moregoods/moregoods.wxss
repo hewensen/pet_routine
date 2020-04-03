@@ -1,0 +1,54 @@
+/* components/moregoods/moregoods.wxss */
+
+page {
+  background: #f1f1f1;
+}
+
+.more_goods {
+  text-align: center;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.more_tip {
+  font-size: 24rpx;
+  color: #777;
+  margin-bottom: 20rpx;
+}
+
+.goods_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.goods_item {
+  width: 49%;
+  background: #fff;
+  font-size: 24rpx;
+  padding: 14rpx;
+  box-sizing: border-box;
+  margin-bottom: 22rpx;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+  text-align: left;
+}
+
+.goods_name {
+  font-weight: bold;
+  margin: 20rpx 0;
+  text-align: left;
+}
+.img_box{
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+ }
+.goods_pic {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}

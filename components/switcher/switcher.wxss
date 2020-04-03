@@ -1,0 +1,70 @@
+/* components/switcher/switcher.wxss */
+
+.switcher_wrapper {
+  position: relative;
+  display: flex;
+  font-size: 26rpx;
+  background: #fff;
+}
+
+.swicher {
+  background: #f1f1f1;
+}
+
+.switcher_item {
+  flex: 1;
+  color: #6d6868;
+  text-align: center;
+  padding: 10rpx 80rpx;
+}
+
+.active_item {
+  color: #000;
+}
+
+.inner {
+  padding: 14rpx 0;
+}
+
+/* .active_inner {
+  border-bottom: 3px solid red;
+} */
+
+.active_line {
+  position: absolute;
+  transition: all 0.2s;
+  top: 76rpx;
+  width: 200rpx;
+  height: 3px;
+  background: red;
+}
+
+.active_left {
+  transform: translateX(90rpx);
+}
+
+.active_right {
+  transform: translateX(460rpx);
+}
+
+.content_wrapper {
+  text-align: center;
+  padding: 10rpx;
+}
+
+.deal_item {
+  padding: 10rpx;
+  display: flex;
+  font-size: 22rpx;
+  color: #777;
+  background: #fff;
+}
+
+.detal_dd {
+  flex: 1;
+}
+
+.title {
+  color: #000;
+  background: #f1f1f1;
+}

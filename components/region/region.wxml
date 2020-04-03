@@ -1,0 +1,26 @@
+<!--components/region/region.wxml-->
+<view class="region">
+  <view class="region_header" wx:if="{{needtitle}}">
+    <image class="region_icon" src="{{iconUrl}}"></image>
+    <view class="region_tt" style="color:{{color}}">
+      <view class="goods_tt1">{{text}}</view>
+      <view class="goods_tt2">{{text_eng}}{{needtitle}}</view>
+    </view>
+  </view>
+  <view class="goods_list">
+    <view class="goods_item" wx:key="index" wx:for="{{goodsList}}">
+      <navigator hover-class="none" url="../../pages/goods_detail/goods_detail?id={{item.id}}">
+        <view class="img_box">
+          <emp-cover></emp-cover>
+          <image class="goods_img" src="{{item.head_img_url}}"></image>
+        </view>
+        <view class="goods_name">{{item.name}}</view>
+        <view class="goods_price">￥{{item.price}}</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="load_more">
+    <view>点击加载更多</view>
+    <view>CLICK TO LOAD MORE</view>
+  </view>
+</view>

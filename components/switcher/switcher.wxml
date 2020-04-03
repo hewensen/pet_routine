@@ -1,0 +1,29 @@
+<!--components/switcher/switcher.wxml-->
+<view class="swicher">
+  <view class="switcher_wrapper">
+    <view class="active_line {{activeIndex==0?'active_left':'active_right'}}"></view>
+    <view data-index="0" bindtap="changeActive" class="switcher_item {{activeIndex==0?'active_item':''}}">
+      <view class="inner {{activeIndex==0?'active_inner':''}}">商品详情</view>
+    </view>
+    <view data-index="1" bindtap="changeActive" class="switcher_item {{activeIndex==1?'active_item':''}}">
+      <view class="inner {{activeIndex==1?'active_inner':''}}">本店成交</view>
+    </view>
+  </view>
+  <view class="content_wrapper">
+    <view wx:if="{{activeIndex==0}}">
+      <image wx:key="index" wx:for="{{imgList}}" src="{{item}}"></image>
+    </view>
+    <view wx:if="{{activeIndex==1}}">
+      <view class="deal_item title">
+        <view class="detal_dd">买家</view>
+        <view class="detal_dd">成交时间</view>
+        <view class="detal_dd">数量</view>
+      </view>
+      <view class="deal_item" wx:key="index" wx:for="{{orderList}}">
+        <view class="detal_dd">{{item.dele_name}}**</view>
+        <view class="detal_dd">{{item.trade_time}}</view>
+        <view class="detal_dd">{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,237 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wxcc635f02e6cd2c35",
+	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/map/map",
+					"pathName": "pages/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/shop_region/shop_region",
+					"pathName": "pages/shop_region/shop_region",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/address_edit/address_edit",
+					"pathName": "pages/address_edit/address_edit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/address_edit/address_edit",
+					"pathName": "pages/address_edit/address_edit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopcar/shopcar",
+					"pathName": "pages/shopcar/shopcar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "components/counter/counter",
+					"pathName": "components/counter/counter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_detail/order_detail",
+					"pathName": "pages/order_detail/order_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "components/region/region",
+					"pathName": "components/region/region",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "pages/order_detail/order_detail",
+					"pathName": "pages/order_detail/order_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods_detail/goods_detail",
+					"pathName": "pages/goods_detail/goods_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "components/ranker/ranker",
+					"pathName": "components/ranker/ranker",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "pages/down_order/down_order",
+					"pathName": "pages/down_order/down_order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "pages/shopcar/shopcar",
+					"pathName": "pages/shopcar/shopcar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/address/address",
+					"pathName": "pages/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/appointment/appointment",
+					"pathName": "pages/appointment/appointment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my_appoint/my_appoint",
+					"pathName": "pages/my_appoint/my_appoint",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_detail_unpay/order_detail_unpay",
+					"pathName": "pages/order_detail_unpay/order_detail_unpay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_detail_payed/order_detail_payed",
+					"pathName": "pages/order_detail_payed/order_detail_payed",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_detail_payed/order_detail_payed",
+					"pathName": "pages/order_detail_payed/order_detail_payed",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_detail_payed/order_detail_payed",
+					"pathName": "pages/order_detail_payed/order_detail_payed",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/test/test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_detail_dele/order_detail_dele",
+					"pathName": "pages/order_detail_dele/order_detail_dele",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/evaluate/evaluate",
+					"pathName": "pages/evaluate/evaluate",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

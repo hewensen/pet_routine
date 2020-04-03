@@ -1,0 +1,109 @@
+/* pages/my_appoint/my_appoint.wxss */
+
+page {
+  background: #f1f1f1;
+}
+
+.book_item {
+  position: relative;
+  width: 94%;
+  margin-left: 3%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+
+.border_red {
+  border: 2px solid red;
+}
+
+.border_green {
+  border: 2px solid rgba(32, 197, 32, 0.849);
+}
+
+.border_blue {
+  border: 2px solid dodgerblue;
+}
+
+.title {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.book_status {
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  padding: 10rpx 16rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 20rpx;
+  font-weight: bold;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  border-bottom-left-radius: 10rpx;
+}
+
+.red {
+  background: red;
+  border-color: red;
+}
+
+.blue {
+  background: dodgerblue;
+  border-color: dodgerblue;
+}
+
+.green {
+  background: rgba(32, 197, 32, 0.849);
+  border-color: rgba(32, 197, 32, 0.849);
+}
+
+.book_detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rpx;
+}
+
+.book_user {
+  margin-left: 30rpx;
+}
+
+.book_time {
+  float: left;
+  margin-top: 10rpx;
+  color: #999;
+}
+
+.book_pic {
+  width: 130rpx;
+  height: 130rpx;
+  float: left;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+
+.cancel_btn {
+  position: absolute;
+  right: 20rpx;
+  top: 54rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  font-size: 23rpx;
+  border: 1px solid #777;
+  text-align: center;
+  color: #777;
+}
+
+.cancel_btn:active {
+  color: #fff;
+  border: none;
+  background: dodgerblue;
+}

@@ -1,0 +1,166 @@
+/* pages/order/order.wxss */
+
+page {
+  background: #f1f1f1;
+}
+
+.trade_time {
+  float: left;
+  font-size: 23rpx;
+  color: #777;
+}
+
+.guide_wrapper {
+  position: relative;
+  display: flex;
+  background: #fff;
+}
+
+.guide_line {
+  transition: all 0.2s;
+  position: absolute;
+  bottom: 0;
+  width: 20%;
+  height: 3px;
+  background: red;
+}
+
+.move0 {
+  transform: translateX(0%);
+}
+
+.move1 {
+  transform: translateX(100%);
+}
+
+.move2 {
+  transform: translateX(200%);
+}
+
+.move3 {
+  transform: translateX(300%);
+}
+
+.move4 {
+  transform: translateX(400%);
+}
+
+.guide_item {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 6rpx solid #fff;
+  font-size: 26rpx;
+  text-align: center;
+  color: rgb(49, 45, 45);
+}
+
+.noorder_wrapper {
+  text-align: center;
+  padding-top: 160rpx;
+  font-size: 28rpx;
+  color: #707070;
+}
+
+.noorder_pic {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+.order_item {
+  background: #fff;
+  padding: 22rpx;
+  margin-top: 10rpx;
+}
+
+.order_title {
+  font-size: 24rpx;
+  overflow: hidden;
+}
+
+.order_no {
+  color: #777;
+  float: left;
+}
+
+.order_status {
+  color: red;
+  float: right;
+}
+
+.order_content {
+  display: flex;
+  background: #8583830e;
+  font-size: 23rpx;
+  padding: 10rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.order_pic {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 6rpx;
+  float: left;
+  margin-right: 16rpx;
+}
+
+.order_desc {
+  float: left;
+  flex: 1;
+}
+
+.order_good {
+  color: #000;
+}
+
+.order_detail {
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.order_price {
+  color: red;
+  font-weight: bold;
+  float: left;
+}
+
+.goods_no {
+  float: right;
+  color: #777;
+}
+
+.good_asum {
+  text-align: right;
+  font-size: 25rpx;
+  margin-top: 10rpx;
+}
+
+.price {
+  font-size: 24rpx;
+  color: red;
+}
+
+.unpay_wrapper {
+  overflow: hidden;
+  font-size: 22rpx;
+  margin-top: 20rpx;
+}
+
+.cancel {
+  border: 1px solid #c1c1c1;
+  color: #999;
+}
+
+.pay{
+  color: #fff;
+  background: red;
+}
+
+.func_btn {
+  padding: 14rpx 24rpx;
+  margin-left: 20rpx;
+  float: right;
+  border-radius: 10rpx;
+}

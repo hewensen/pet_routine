@@ -1,0 +1,36 @@
+/* components/empcover/empcover.wxss */
+
+.emp_cover {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.emp_circle {
+  width: 114rpx;
+  height: 114rpx;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  transform: rotate(30deg);
+}
+
+.circle_inner {
+  width: 90rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  line-height: 90rpx;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 10rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 24rpx;
+}

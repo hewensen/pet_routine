@@ -1,0 +1,28 @@
+/* components/counter.wxss */
+.counter{
+  display: flex;
+  justify-content: space-between;
+  width: 190rpx;
+  height: 60rpx;
+}
+.down,.up{
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  float: left;
+  background: #f1f1f1;
+}
+.unable{
+  opacity: 0.5;
+}
+.number{
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  font-size: 24rpx;
+  background: #f1f1f1;
+  float: left;
+}

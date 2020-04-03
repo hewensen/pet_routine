@@ -1,0 +1,22 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class="container">
+  <navbar back="true" text="发表评价"></navbar>
+  <view class="wrapper">
+    <view class="goods_info">
+      <image class="goods_pic" src="{{goodsInfo.goods_img_url}}"></image>
+      <view class="goods_name">{{goodsInfo.goods_name}}</view>
+      <view class="evaluate_wrapper">
+        <view class="ranker">
+          <ranker bind:rankChange="rankChange"></ranker>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="comment_wrapper">
+      <textarea class="area_input" bindinput="getDetailInput" placeholder="请输入您对商品的评价(不超过50字)"></textarea>
+    </view>
+
+    <view class="sub_btn" bindtap="submit">提交评价</view>
+  </view>
+</view>

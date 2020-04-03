@@ -1,0 +1,21 @@
+<!--components/ranker/ranker.wxml-->
+<view class="wrapper">
+  <view class="item" data-index="0" bindtap="changeIndex">
+    <view>
+      <image class="pic" src="{{activeIndex==0?'/images/rs3.png':'/images/r3.png'}}"></image>
+    </view>
+    <view class="{{activeIndex==0?'active':''}}">好评</view>
+  </view>
+  <view class="item" data-index="1" bindtap="changeIndex">
+    <view>
+      <image class="pic" src="{{activeIndex==1?'/images/rs2.png':'/images/r2.png'}}"></image>
+    </view>
+    <view class="{{activeIndex==1?'active':''}}">中评</view>
+  </view>
+  <view class="item" data-index="2" bindtap="changeIndex">
+    <view>
+      <image class="pic" src="{{activeIndex==2?'/images/rs1.png':'/images/r1.png'}}"></image>
+    </view>
+    <view class="{{activeIndex==2?'active':''}}">差评</view>
+  </view>
+</view>

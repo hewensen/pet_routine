@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<view class="container">
+  <navbar text="伊利宠物会所"></navbar>
+  <view class="notice">
+    <view>
+      <image class="notice_pic" src="/images/notice.png"></image>公告：{{notice}}</view>
+  </view>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" circular="true">
+    <swiper-item wx:key="index" wx:for="{{banners}}">
+      <image class="banner_img" src="{{item}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <view class="menu_wrapper">
+
+    <view class="menu_item">
+      <navigator hover-class="none" url="../../pages/shop_region/shop_region?type=1">
+        <view class="circle_wrapper circle_blue">
+          <image class="menu_img" src="/images/food.png"></image>
+        </view>
+        <text>宠物食品</text>
+      </navigator>
+    </view>
+
+    <view class="menu_item">
+      <navigator hover-class="none" url="../../pages/shop_region/shop_region?type=3">
+        <view class="circle_wrapper circle_pink">
+          <image class="menu_img" src="/images/medcine.png"></image>
+        </view>
+        <text>宠物药品</text>
+      </navigator>
+    </view>
+    <view class="menu_item">
+      <navigator hover-class="none" url="../../pages/shop_region/shop_region?type=2">
+        <view class="circle_wrapper circle_green">
+          <image class="menu_img" src="/images/pet.png"></image>
+        </view>
+        <text>宠物用品</text>
+      </navigator>
+    </view>
+    <view class="menu_item">
+      <navigator hover-class="none" url="../../pages/appointment/appointment">
+        <view class="circle_wrapper circle_yellow">
+          <image class="menu_img" src="/images/book.png"></image>
+        </view>
+        <text>洗护预约</text>
+      </navigator>
+    </view>
+    <view class="menu_item">
+      <navigator hover-class="none" url="../../pages/shop_region/shop_region">
+        <view class="circle_wrapper circle_greey">
+          <image class="menu_img" src="/images/nutri.png"></image>
+        </view>
+        <text>营养补充</text>
+      </navigator>
+    </view>
+    <view class="menu_item">
+      <navigator hover-class="none" url="../../pages/shop_region/shop_region?type=4">
+        <view class="circle_wrapper circle_purple">
+          <image class="menu_img" src="/images/toy.png"></image>
+        </view>
+        <text>玩具专区</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="tip_wraper"   wx:if="{{showTip}}" animation="{{big}}">
+    <view class="tip_header">
+      <image class="tip_pic" src="{{checkTip.img_url}}"></image>
+      <view class="tip_addtime">{{checkTip.addtime}}</view>
+    </view>
+    <view class="tip_title">{{checkTip.title}}</view>
+    <view class="tip_content">
+      {{checkTip.content}}
+    </view>
+    <image bindtap="close_tip" class="close_pic" src="/images/close.png"></image>
+  </view>
+
+  <view class="news_title">
+    宠物小课堂
+    <view class="news_wrapper">
+      <view class="news_item" wx:key="index" wx:for="{{tips}}" data-index="{{index}}" bindtap="showTip">
+        <image class="news_img" src="{{item.img_url}}"></image>
+        <view class="news_content">
+          <view class="news_content_tt">
+            {{item.title}}
+          </view>
+          <view class="news_content_desc">
+            {{item.content}}
+          </view>...
+          <view class="news_time">
+            {{item.addtime}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<!--components/empcover/empcover.wxml-->
+<view class="emp_cover">
+  <view class="emp_circle">
+    <view class="circle_inner">
+      已售空
+    </view>
+  </view>
+</view>

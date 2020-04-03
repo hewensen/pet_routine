@@ -1,0 +1,124 @@
+/* pages/shopcar/shopcar.wxss */
+page{
+  background: #f1f1f1;
+}
+.emp_car{
+  padding-top: 180rpx;
+  text-align: center;
+}
+.car_pic{
+  width: 160rpx;
+  height: 160rpx;
+  margin-bottom: 20rpx;
+}
+.emp_tt1{
+  font-size: 30rpx;
+  margin: 20rpx;
+  color: rgb(83, 17, 17);
+}
+.emp_tt2{
+  font-size: 26rpx;
+  color: #777;
+}
+.go_btn{
+  width: 140rpx;
+  height: 54rpx;
+  color: red;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  border: 1px solid red;
+  margin: 30rpx auto;
+}
+.go_btn:active{
+  background: red;
+  color: #fff;
+}
+.car_list{
+  padding: 30rpx;
+}
+.car_item{
+  display: flex;
+  background: #fff;
+  overflow: hidden;
+  padding: 20rpx;
+}
+.goods_img{
+  width: 150rpx;
+  height: 150rpx;
+  float: left;
+}
+.goods_content{
+  flex: 1;
+  float: left;
+  margin-left: 20rpx;
+}
+.goods_tt{
+  height: 40rpx;
+  font-size: 28rpx;
+  margin: 0 0;
+}
+.goods_desc{
+  margin-top: 52rpx;
+  font-size: 28rpx;
+}
+.money{
+  font-weight: bold;
+  color: red;
+  float: left;
+  margin-top: 24rpx;
+}
+.counter{
+   float: right; 
+}
+.assum_wrapper{
+  position: fixed; 
+  width: 100%;
+  bottom: 0;
+  padding: 10rpx; 
+  background: #fff;
+  font-size: 24rpx; 
+}
+.chose_all{
+  height: 70rpx;
+  line-height: 70rpx;
+  float: left;
+}
+.assum_right{
+  float: right;
+}
+.assum{ 
+  background: rgba(255, 0, 0, 0.7);
+  border-radius: 38rpx;
+  color: #fff;
+  float: right;
+  width: 160rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin-right: 20rpx;
+}
+.assum_content{
+  float: right;
+  margin-right: 20rpx;
+  text-align: right;
+}
+.assum_tip{
+  color: #777;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+}
+.money_wrapper{
+  font-size: 20rpx;
+}
+.ass_money{
+  font-size: 26rpx;
+  color: red;
+  font-weight: bold;
+}
+.checkbox_wrapper{
+  line-height: 140rpx;
+  margin-right: 10rpx;
+}
+ 
+ 

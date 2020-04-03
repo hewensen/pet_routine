@@ -1,0 +1,5 @@
+/* pages/shop_region/shop_region.wxss */
+page{
+  background: #fff;
+}
+ 

@@ -1,0 +1,101 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <navbar text="个人中心"></navbar>
+  <view class="userinfo_wrapper">
+   <button wx:if="{{!authed}}" class="auth_btn" bindgetuserinfo="getUserInfo" open-type='getUserInfo'>登录</button>
+    <view>
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <text class="nickname">{{userInfo.nickName}}</text>
+    
+  </view>
+
+  <view class="menu_wrapper">
+    <navigator hover-class="none" url="../../pages/order/order">
+      <view class="menu_all">
+        <image class="menu_left" src="../../images/order2.png"></image>
+        <text>全部订单</text>
+        <image class="menu_right" src="../../images/right.png"></image>
+      </view>
+    </navigator>
+    <view class="menu_list">
+
+      <view class="menu_item">
+        <navigator hover-class="none" url="../../pages/order/order?index=1&type=1">
+          <view>
+            <image class="menu_pic" src="../../images/m2.png"></image>
+          </view>
+          <text class="menu_tt">待付款</text>
+        </navigator>
+      </view>
+
+      <view class="menu_item">
+        <navigator hover-class="none" url="../../pages/order/order?index=2&type=2">
+          <view>
+            <image class="menu_pic" src="../../images/m1.png"></image>
+          </view>
+          <text class="menu_tt">待发货</text>
+        </navigator>
+      </view>
+      <view class="menu_item">
+        <navigator hover-class="none" url="../../pages/order/order?index=3&type=3">
+          <view>
+            <image class="menu_pic" src="../../images/m3.png"></image>
+          </view>
+          <text class="menu_tt">待收货</text>
+        </navigator>
+      </view>
+      <view class="menu_item">
+        <navigator hover-class="none" url="../../pages/order/order?index=4&type=5">
+          <view>
+            <image class="menu_pic" src="../../images/m4.png"></image>
+          </view>
+          <text class="menu_tt">已完成</text>
+        </navigator>
+      </view>
+
+    </view>
+  </view>
+  <navigator hover-class="none" url="../../pages/address/address">
+    <view class="func_item">
+      <view class="func_inner">
+        <image class="func_pic" src="../../images/f3.png"></image>
+        <text class="func_tt">收货地址</text>
+        <image class="func_right" src="../../images/right.png"></image>
+      </view>
+    </view>
+  </navigator>
+  <view class="func_item" bindtap="phoneCall">
+    <view class="func_inner">
+      <image class="func_pic" src="../../images/f2.png"></image>
+      <text class="func_tt">联系电话</text>
+      <image class="func_right" src="../../images/right.png"></image>
+    </view>
+  </view>
+  <navigator hover-class="none" url="../../pages/map/map">
+    <view class="func_item">
+      <view class="func_inner">
+        <image class="func_pic" src="../../images/map.png"></image>
+        <text class="func_tt">在线地图</text>
+        <image class="func_right" src="../../images/right.png"></image>
+      </view>
+    </view>
+  </navigator>
+  <navigator hover-class="none" url="../../pages/my_appoint/my_appoint">
+    <view class="func_item">
+      <view class="func_inner">
+        <image class="func_pic" src="../../images/bk.png"></image>
+        <text class="func_tt">我的预约</text>
+        <image class="func_right" src="../../images/right.png"></image>
+      </view>
+    </view>
+  </navigator>
+  <view class="func_item">
+    <view class="func_inner last">
+      <image class="func_pic" src="../../images/f1.png"></image>
+      <text class="func_tt">关于我们</text>
+      <image class="func_right" src="../../images/right.png"></image>
+    </view>
+  </view>
+
+</view>

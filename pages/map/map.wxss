@@ -1,0 +1,56 @@
+/* pages/map/map.wxss */
+
+.map_box {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.map_func {
+  position: fixed;
+  width: 100%;
+  padding: 60rpx 100rpx 110rpx 130rpx;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  background: #f1f1f1;
+  box-shadow: 0px -1px 4px #c1c1c1;
+}
+
+.map_tt1 {
+  font-size: 30rpx;
+  margin-top: 8rpx;
+}
+
+.map_tt2 {
+  font-size: 24rpx;
+  color: #777;
+  margin-top: 10rpx;
+}
+
+.map_guide {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: dodgerblue;
+  right: 80rpx;
+  bottom: 110rpx;
+  border-top: 1px solid #c1c1c1;
+}
+
+.map_pic {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 15rpx;
+}
+
+.map_pic2 {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  left: 50rpx;
+  bottom: 120rpx;
+}

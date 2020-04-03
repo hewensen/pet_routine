@@ -1,0 +1,83 @@
+<!--pages/goods_detail/goods_detail.wxml-->
+<view class="container">
+  <navbar text="商品详情" back="true" home="true"></navbar>
+  <swiper class="swiper" autoplay="true" circular="true">
+    <swiper-item wx:key="index" wx:for="{{goodsInfo.main_img_url}}">
+      <image class="banner_img" src="{{item}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="goods_desc">
+    <view class="goods_name">{{goodsInfo.name}}</view>
+    <view class="price">￥{{goodsInfo.price}}</view>
+  </view>
+  <view class="goods_detail">
+    <view>运费
+      <text class="goods_num">￥0~12.00</text>
+    </view>
+    <view>销量
+      <text class="goods_num">{{goodsInfo.sell_num}}</text>
+    </view>
+    <view>剩余
+      <text class="goods_num">{{goodsInfo.rest}}</text>
+    </view>
+  </view>
+  <view class="trace_mathod">
+    <view class="trace_tip">配送方式：</view>
+    <view class="trade_btn">1.快递配送</view>
+    <view class="trade_btn">2.到店自提</view>
+  </view>
+  <view class="asset_wrapper">
+    <view class="asset_title">
+      <text>宝贝评价</text>
+    </view>
+  </view>
+  <switcher orderList="{{orderList}}" imgList="{{goodsInfo.detail_img_url}}"></switcher>
+  <view class="func_big_wrapper">
+    <view class="func_wrapper">
+      <view class="left_icons">
+        <view class="left_item">
+          <view>
+            <image class="left_pic" src="/images/main.png"></image>
+          </view>
+          <text class="left_tt">首页</text>
+        </view>
+        <view class="left_item">
+          <view>
+            <image class="left_pic" src="/images/user.png"></image>
+          </view>
+          <text class="left_tt">客服</text>
+        </view>
+        <view class="left_item">
+          <view>
+            <image class="left_pic" src="/images/car.png"></image>
+          </view>
+          <text class="left_tt">购物车</text>
+        </view>
+      </view>
+      <view class="right_btn">
+        <view class="btn_item add" data-type="car" bindtap="showHider">加入购物车</view>
+        <view class="btn_item buy" data-type="buy" bindtap="showHider">立即购买</view>
+      </view>
+    </view>
+  </view>
+  <view animation="{{moveUp}}" wx:if="{{showHider}}" class="chose_num_wrapper">
+    <view class="chose_goods_content">
+      <image class="chose_pic" src="/images/dog.jpg"></image>
+      <view class="chose_desc">
+        <view class="chose_text">{{goodsInfo.name}}</view>
+        <view class="chose_money">￥{{goodsInfo.price}}</view>
+      </view>
+    </view>
+    <view class="chose_info">
+      <view class="chose_wrapper">
+        <text class="chose_num">购买数量：</text>
+        <car-counter bind:numChange="numChange" count="{{goodsNum}}"></car-counter>
+      </view>
+      <view class="chose_rest">剩余{{goodsInfo.rest}}件
+      </view>
+    </view>
+    <view class="chose_btn" wx:if="{{type=='car'}}" bindtap="addToCar">加入购物车</view>
+    <view class="chose_btn" wx:if="{{type=='buy'}}" bindtap="buyNow">立即下单</view>
+  </view>
+  <view class="cover" bindtap="hideHider" animation="{{fadeIn}}" wx:if="{{showHider}}"></view>
+</view>

@@ -1,0 +1,15 @@
+<!--components/moregoods/moregoods.wxml-->
+<view class="more_goods">
+  <view class="more_tip">更多精选商品</view>
+  <view class="goods_wrapper">
+
+    <view class="goods_item" data-tid="{{item.id}}" bindtap="goToDetail" wx:key="index" wx:for="{{goodsList}}">
+      <view class="img_box">
+        <image class="goods_pic" src="{{item.head_img_url}}"></image>
+      </view>
+      <view class="goods_name">{{item.name}}</view>
+      <view class="price">￥{{item.price}}</view>
+    </view> 
+
+  </view>
+</view>

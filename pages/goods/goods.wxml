@@ -1,0 +1,26 @@
+<!--pages/goods/goods.wxml-->
+<view class="container">
+  <navbar text="所有商品"></navbar>
+  <view class="goods_header">
+    <view class="cover"></view>
+    <image class="back_pic" src="/images/banner2.png"></image>
+    <view class="goods_content">
+      <image class="goods_tpic" src="/images/dog.jpg"></image>
+      <view class="goods_info">
+        <text class="good_tt">全部商品</text>{{allCount}}
+        <text class="sep">|</text>
+        <text class="good_tt">上新</text>0
+      </view>
+    </view>
+  </view>
+
+  <view class="saercher_wrapper">
+    <image class="search_icon" src="/images/search.png"></image>
+    <input class="search_input" placeholder="搜索商品"></input>
+  </view>
+  <region goodsList="{{list1}}" needtitle="true" text="宠物食品专区" iconUrl="/images/food_region.png" color="#1296db"></region>
+  <region goodsList="{{list2}}" needtitle="true" text="宠物药品专区" iconUrl="/images/pill_region.png" color="#FF69B4"></region>
+  <region goodsList="{{list3}}" needtitle="true" text="宠物用品专区" iconUrl="/images/use.png" color="#228B22"></region>
+  <region goodsList="{{list4}}" needtitle="true" text="宠物玩具专区" iconUrl="/images/toy_region.png" color="#20B2AA"></region>
+  <region goodsList="{{list5}}" needtitle="true" text="宠物营养补充专区" iconUrl="/images/nutri_region.png" color="#F08080"></region>
+</view>

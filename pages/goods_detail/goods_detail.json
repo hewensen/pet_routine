@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "switcher": "../../components/switcher/switcher",
+    "car-counter": "../../components/counter/counter"
+  },
+  "navigationBarTitleText": "商品详情"
+
+}

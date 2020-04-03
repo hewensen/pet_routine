@@ -1,0 +1,5 @@
+<!--pages/shop_region/shop_region.wxml-->
+<view class="container">
+  <navbar text="宠物商店" back="true" home="true"></navbar>
+  <region needtitle="" goodsList="{{goodsList}}"></region>
+</view>

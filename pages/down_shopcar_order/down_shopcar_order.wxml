@@ -1,0 +1,83 @@
+<!--pages/down_order/down_order.wxml-->
+<wxs module="numberUtil" src="../../utils/format.wxs"></wxs>
+<view class="container">
+  <navbar back="true" text="确认订单"></navbar>
+  <view class="content">
+    <view bindtap="hideWrapper" animation="{{fadeIn}}" class="cover" wx:if="{{showWrapper}}"></view>
+    <view animation="{{BeBig}}" class="address_wrapper" wx:if="{{showWrapper}}">
+      <view data-index="{{index}}" class="chose_item {{index == activeIndex?'active':''}}" wx:key="index" wx:for="{{addressList}}" catchtap="choseChange">
+        <view class="chose_add">
+          <text> {{item.name}}</text>
+          <text class="chose_phone">{{item.mobile}}</text>
+        </view>
+        <view class="chose_detail">
+          {{item.province}}{{item.city}}{{item.region}}{{item.detail}}
+        </view>
+        <image class="check_pic" wx:if="{{index != activeIndex}}" src="/images/un_check.png"> </image>
+        <image class="check_pic" wx:if="{{index == activeIndex}}" src="/images/checked.png"> </image>
+      </view>
+    </view>
+    <view class="address_info" bindtap="changeAddress">
+      <view class="user_info">
+        <image class="loc_icon" src="/images/posi.png"></image>
+        <text> 收货人：{{addressList[activeIndex]['name']}}</text>
+        <text class="phone">{{addressList[activeIndex]['mobile']}}</text>
+      </view>
+      <view class="address_detail">
+        收货地址：{{addressList[activeIndex]['province']}}{{addressList[activeIndex]['city']}}{{addressList[activeIndex]['region']}}{{addressList[activeIndex]['detail']}}
+      </view>
+      <image class="right_icon" src="/images/right.png"></image>
+    </view>
+
+    <view class="car_list" wx:key="index" wx:for="{{orderListInfo}}">
+      <view class="order_content">
+        <image class="order_pic" src="{{item.head_img_url}}"></image>
+        <view class="order_desc">
+          <view class="order_good">{{item.name}}</view>
+          <view class="order_detail">
+            <view class="order_price">￥{{item.price}}</view>
+            <view class="goods_no">x {{item.goods_count}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="func_item sep_line dele">
+        <view class="func_inner">
+          <text>配送方式</text>
+          <picker class="dele_input" data-index="{{index}}" bindchange="bindPickerChange" value="{{checkIndex}}" range="{{deleType}}">
+            <view class="picker">
+              {{deleType[orderListInfo[index].deleType-1]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="func_item word">
+        <text class="word_tt">买家留言</text>
+        <input class="weui-input word_input" data-index="{{index}}" bindinput="getWordsInput" placeholder="留言建议提前协商（50字以内）" />
+      </view>
+      <view class="assum_wrapper">
+        <view class="assum_inner">
+          <view class="inner_item">
+            <text>商品金额</text>
+            <text>{{numberUtil.numberFormat(item.price*item.goods_count)}}</text>
+          </view>
+          <view class="inner_item">
+            <text>运费</text>
+            <text>+￥{{numberUtil.numberFormat(item.dele_money)}}</text>
+          </view>
+        </view>
+        <view class="assum">合计：
+          <text class="money">￥{{numberUtil.numberFormat(item.price*item.goods_count+item.dele_money)}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="ensure_wrapper">
+      <view class="ensure_btn" bindtap="subOrder">提交订单</view>
+      <view class="ensure_price">
+        合计：
+        <text class="money_bold">￥{{numberUtil.numberFormat(sumAll)}}</text>
+      </view>
+    </view>
+  </view>
+</view>

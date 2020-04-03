@@ -1,0 +1,347 @@
+/* pages/order_detail/order_detail.wxss */
+
+page {
+  background: #f1f1f1;
+}
+
+.order_item {
+  background: #fff;
+  padding: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.address_info {
+  position: relative;
+  padding: 20rpx 80rpx;
+  background: #fff;
+  margin-top: 10rpx;
+}
+
+.user_info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25rpx;
+  color: #000;
+  font-weight: bold;
+}
+
+.address_detail {
+  font-size: 23rpx;
+  color: #777;
+  margin-top: 10rpx;
+}
+
+.loc_icon {
+  position: absolute;
+  left: 36rpx;
+  width: 36rpx;
+  height: 36rpx;
+  top: 20rpx;
+}
+
+.order_title {
+  font-size: 24rpx;
+  overflow: hidden;
+}
+
+.order_no {
+  color: #777;
+  float: left;
+}
+
+.order_status {
+  color: red;
+  float: right;
+}
+
+.order_content {
+  display: flex;
+  background: #fcfbfb;
+  font-size: 23rpx;
+  padding: 16rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.order_pic {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 6rpx;
+  float: left;
+  margin-right: 16rpx;
+}
+
+.order_desc {
+  float: left;
+  flex: 1;
+}
+
+.order_good {
+  color: #000;
+}
+
+.order_detail {
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.order_price {
+  color: red;
+  font-weight: bold;
+  float: left;
+}
+
+.goods_no {
+  float: right;
+  color: #777;
+}
+
+.good_asum {
+  text-align: right;
+  font-size: 25rpx;
+  margin-top: 20rpx;
+  color: #777;
+}
+
+.price {
+  font-size: 24rpx;
+  color: red;
+  font-weight: bold;
+}
+
+.order_status {
+  width: 120rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  color: red;
+  font-size: 24rpx;
+  border: 1px solid red;
+  margin-top: 30rpx;
+}
+
+.order_deitem {
+  background: #fff;
+  padding: 20rpx;
+  overflow: hidden;
+  margin-bottom: 8rpx;
+}
+
+.de_tt {
+  float: left;
+  font-size: 26rpx;
+}
+
+.de_desc {
+  float: right;
+  font-size: 22rpx;
+}
+
+.assum, .assum_tt {
+  margin-bottom: 0;
+  font-size: 22rpx;
+}
+
+.pay_way {
+  margin-top: 8rpx;
+}
+
+.pay_info {
+  padding: 20rpx;
+  font-size: 24rpx;
+  text-align: right;
+  background: #fff;
+}
+
+.wechat {
+  width: 36rpx;
+  height: 36rpx;
+  float: right;
+  margin-right: 10rpx;
+}
+
+.money {
+  color: red;
+  font-weight: bold;
+}
+
+.orderno_detail {
+  background: #fff;
+  padding: 20rpx;
+  font-size: 22rpx;
+  color: #777;
+  margin-top: 20rpx;
+}
+
+.orderno_item {
+  margin-top: 6rpx;
+}
+
+.assum {
+  text-align: right;
+  padding: 20rpx;
+  background: #fff;
+  font-size: 22rpx;
+}
+
+.money {
+  color: red;
+  font-size: 24rpx;
+}
+
+.ensure_wrapper {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  text-align: right;
+  font-size: 24rpx;
+}
+
+.ensure_price {
+  line-height: 80rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+.ensure_btn {
+  width: 140rpx;
+  padding: 24rpx 50rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background: red;
+  text-align: center;
+  float: right;
+}
+
+.pay_wrapper {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 24rpx;
+  background: #f1f1f1;
+  color: green;
+  z-index: 9;
+  bottom: -80rpx;
+}
+
+.cover {
+  position: fixed;
+  z-index: 8;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+.money_bold {
+  font-weight: bold;
+  color: red;
+  font-size: 24rpx;
+}
+
+.text_wrapper {
+  display: flex;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.green {
+  color: #09ac0e;
+}
+
+.status_wrapper {
+  background: #fff;
+  padding: 40rpx;
+}
+
+.text_wrapper {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.left {
+  flex: 1;
+  color: green;
+  text-align: left;
+}
+
+.middle {
+  flex: 2;
+  text-align: center;
+}
+
+.right {
+  flex: 1;
+  text-align: right;
+}
+
+.circle {
+  position: absolute;
+  width: 80rpx;
+  height: 30rpx;
+  text-align: center;
+  background: #fff;
+  bottom: -46rpx;
+}
+
+.circle_left {
+  left: 0;
+}
+
+.circle_img {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.circle_img_emp {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.circle_middle {
+  left: calc(50% - 40rpx);
+}
+
+.circle_right {
+  right: 0;
+}
+
+.text_item {
+  position: relative;
+}
+
+.line {
+  width: 80%;
+  margin-left: 10%;
+  height: 1rpx;
+  background: #c1c1c1;
+  margin-top: 30rpx;
+}
+
+.tip_wrapper {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background: #fff; 
+  height: 80rpx; 
+  line-height: 40rpx;
+  padding: 10rpx;
+  color: #707070;
+  padding-left: 50rpx;
+  font-size: 24rpx; 
+}
+
+.tip_pic {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}

@@ -1,0 +1,58 @@
+<!--pages/order/order.wxml-->
+<view class="container">
+  <navbar text="全部订单" back="true" home="true"></navbar>
+  <view class="guide_wrapper">
+    <view wx:key="index" wx:for="{{menuList}}" data-type="{{item.type}}" data-index="{{index}}" class="guide_item {{activeIndex==index?'avtive_item':''}}" bindtap="changeActive">
+      {{item.content}}
+    </view>
+    <view class="guide_line move{{activeIndex}}"></view>
+  </view>
+
+  <view class="noorder_wrapper" wx:if="{{orderList.length==0}}">
+    <view>
+      <image class="noorder_pic" src="/images/order2.png"> </image>
+    </view>
+
+    <text>暂无订单</text>
+  </view>
+
+  <view data-status="{{item.status}}" data-orderid="{{item.id}}" catchtap="gotoDetail" class="order_item" wx:key="index" wx:for="{{orderList}}">
+    <view class="order_title">
+      <text class="order_no">订单编号：{{item.trade_no}}</text>
+      <text class="order_status" wx:if="{{item.status==1}}">待付款</text>
+      <text class="order_status" wx:elif="{{item.status==2}}">待发货</text>
+      <text class="order_status" wx:elif="{{item.status==3}}">待收货</text>
+      <text class="order_status" wx:elif="{{item.status==4}}">待评价</text>
+      <text class="order_status" wx:elif="{{item.status==5}}">已完成</text>
+      <text class="order_status" wx:elif="{{item.status==6}}">交易关闭</text>
+    </view>
+    <view class="order_content">
+      <image class="order_pic" src="{{item.goods_img_url}}"></image>
+      <view class="order_desc">
+        <view class="order_good">{{item.goods_name}}</view>
+        <view class="order_detail">
+          <view class="order_price">￥{{item.single_price}}</view>
+          <view class="goods_no">x {{item.num}}</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="good_asum">
+      <text class="trade_time">交易时间：{{item.trade_time}}</text> 合计:
+      <text class="price">￥{{item.all_price}}</text>
+    </view>
+    <view class="unpay_wrapper" wx:if="{{item.status==1}}">
+      <view class="func_btn pay">立即支付</view>
+      <view class="func_btn cancel" data-trade_no="{{item.trade_no}}" catchtap="cancel">取消</view>
+    </view>
+
+     <view class="unpay_wrapper" wx:if="{{item.status==3}}">
+      <view class="func_btn pay" data-trade_no="{{item.trade_no}}"  catchtap="acceptGoods">确认收货</view> 
+    </view>
+
+     <view class="unpay_wrapper" wx:if="{{item.status==4}}">
+      <view class="func_btn cancel" data-trade_no="{{item.trade_no}}" catchtap="goAsset">去评价</view> 
+    </view>
+  </view>
+
+</view>

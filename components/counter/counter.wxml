@@ -1,0 +1,6 @@
+<!--components/counter.wxml-->
+<view class="counter">
+  <view class="down {{count<=1?'unable':''}}" bindtap="countDown">-</view>
+  <input class="number" disabled="true" value="{{count}}"></input>
+  <view class="up  {{count>=20?'unable':''}}" bindtap="countUp">+</view>
+</view>

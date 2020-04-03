@@ -1,0 +1,65 @@
+/* pages/evaluate/evaluate.wxss */
+
+page {
+  background: #f1f1f1;
+}
+
+.goods_info {
+  overflow: hidden;
+}
+
+.sub_btn {
+  width: 70%;
+  margin-left: 15%;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  color: #fff;
+  background: red;
+  text-align: center;
+}
+
+.wrapper {
+  width: 96%;
+  margin-left: 2%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  background: #fff;
+  margin-top: 10rpx;
+}
+
+.area_input {
+  padding: 24rpx;
+  height: 260rpx;
+  background: #f1f1f1;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+}
+
+.evaluate_wrapper {
+  overflow: hidden;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+}
+
+.rank_rip {
+  float: left;
+  margin-top: 20rpx;
+  font-weight: bold;
+  margin-right: 40rpx;
+}
+
+.goods_pic {
+  width: 140rpx;
+  height: 140rpx;
+  float: left;
+  border-radius: 30rpx;
+  margin-right: 20rpx;
+}
+
+.ranker {
+  float: left;
+}
