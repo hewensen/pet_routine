@@ -12,18 +12,23 @@
 
   <view class="car_list">
     <view class="car_item" wx:key="index" wx:for="{{carList}}">
-      <view class="checkbox_wrapper">
-        <checkbox data-index="{{index}}" bindtap="handleTap" checked="{{item.selected}}"></checkbox>
-      </view>
-      <image class="goods_img" src="{{item.head_img_url}}"></image>
-      <view class="goods_content">
-        <view class="goods_tt">{{item.name}}</view>
-        <view class="goods_desc">
-          <text class="money">￥{{item.price}}</text>
-          <view class="counter">
-            <car-counter  bind:numChange="numChange" count="{{item.goods_count}}" cid="{{item.id}}" index="{{index}}"></car-counter>
+      <view class="content_left {{item.showDelete?'content_delete':''}}" data-index="{{index}}" bindtouchstart="touchStart" bindtouchmove="touchMove">
+        <view class="checkbox_wrapper">
+          <checkbox data-index="{{index}}" bindtap="handleTap" checked="{{item.selected}}"></checkbox>
+        </view>
+        <image class="goods_img" src="{{item.head_img_url}}"></image>
+        <view class="goods_content">
+          <view class="goods_tt">{{item.name}}</view>
+          <view class="goods_desc">
+            <text class="money">￥{{item.price}}</text>
+            <view class="counter">
+              <car-counter  bind:numChange="numChange" count="{{item.goods_count}}" cid="{{item.id}}" index="{{index}}"></car-counter>
+            </view>
           </view>
         </view>
+      </view>
+      <view data-id="{{item.id}}" bindtap="deleteCar"   class="dele_wrapper {{item.showDelete?'showDele':''}}">
+        <image class="dele_pic" src="/images/delete.png"></image>
       </view>
     </view>
   </view>
@@ -38,6 +43,6 @@
         <text class="ass_money">￥{{toTalPrice}}</text>
       </view>
       <view class="assum_tip">不含运费</view>
-    </view> 
+    </view>
   </view>
 </view>

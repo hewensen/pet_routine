@@ -16,34 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var openId = (wx.getStorageSync('openId'));
-    var that = this;
-    wx.request({
-      method: 'POST',
-      url: app.globalData.host + '/api/pet/user/getShopCar',
-      data: {
-        openId: openId
-      },
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      success(res) {
-        var list = res.data.data.list;
-        var goods_list = res.data.data.goodsList;
-        var data = [];
-        list.forEach(item => {
-          let message = {
-            selected: false,
-            ...item
-          }
-          data.push(message);
-        })
-        that.setData({
-          carList: data,
-          goodsList: goods_list
-        })
-      }
-    })
+     this.getCars();
   },
 
   /**
@@ -93,6 +66,36 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  getCars:function(){
+    var openId = (wx.getStorageSync('openId'));
+    var that = this;
+    wx.request({
+      method: 'POST',
+      url: app.globalData.host + '/api/pet/user/getShopCar',
+      data: {
+        openId: openId
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success(res) {
+        var list = res.data.data.list;
+        var goods_list = res.data.data.goodsList;
+        var data = [];
+        list.forEach(item => {
+          let message = {
+            selected: false,
+            ...item
+          }
+          data.push(message);
+        })
+        that.setData({
+          carList: data,
+          goodsList: goods_list
+        })
+      }
+    })
   },
   numChange: function(e) {
     var count = e.detail.count;
@@ -185,6 +188,61 @@ Page({
     var url = '../down_shopcar_order/down_shopcar_order?goodsList=' + JSON.stringify(goodsList);
     wx.navigateTo({
       url: url
+    })
+  },
+  touchStart:function(e){
+    var index =e.currentTarget.dataset.index;
+    var carList = this.data.carList;
+    carList[index].startPoint = [e.touches[0].pageX,e.touches[0].pageY];
+    carList[index].showDelete=false;
+    this.setData({
+      carList: carList
+    })
+  },
+  touchMove:function(e){
+    var index = e.currentTarget.dataset.index;  
+    var carList = this.data.carList;
+    var curPoint = [e.touches[0].pageX, e.touches[0].pageY];
+    var startpoint = carList[index].startPoint;
+    if (curPoint[0] < startpoint[0]){
+      carList[index].showDelete = true;
+    } 
+    this.setData({
+      carList:carList
+    })
+  },
+  deleteCar:function(e){
+    var id = e.currentTarget.dataset.id;
+    var openId = (wx.getStorageSync('openId'));
+    var that = this;
+    wx.showLoading();
+    wx.request({
+      method: 'POST',
+      url: app.globalData.host + '/api/pet/user/deleteCar',
+      data: {
+        openid: openId,
+        id: id
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success(res) {
+        wx.hideLoading();
+        var data = res.data;
+        if (data.code == 1) {
+         
+          setTimeout(function () {
+            that.getCars();
+          }, 500)
+
+        } else {
+          wx.showToast({
+            title: data.msg,
+            icon: 'noen',
+            duration: 2000
+          })
+        }
+      }
     })
   }
 })

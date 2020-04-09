@@ -1,26 +1,32 @@
 /* pages/shopcar/shopcar.wxss */
-page{
+
+page {
   background: #f1f1f1;
 }
-.emp_car{
+
+.emp_car {
   padding-top: 180rpx;
   text-align: center;
 }
-.car_pic{
+
+.car_pic {
   width: 160rpx;
   height: 160rpx;
   margin-bottom: 20rpx;
 }
-.emp_tt1{
+
+.emp_tt1 {
   font-size: 30rpx;
   margin: 20rpx;
   color: rgb(83, 17, 17);
 }
-.emp_tt2{
+
+.emp_tt2 {
   font-size: 26rpx;
   color: #777;
 }
-.go_btn{
+
+.go_btn {
   width: 140rpx;
   height: 54rpx;
   color: red;
@@ -30,64 +36,113 @@ page{
   border: 1px solid red;
   margin: 30rpx auto;
 }
-.go_btn:active{
+
+.go_btn:active {
   background: red;
   color: #fff;
 }
-.car_list{
+
+.car_list {
   padding: 30rpx;
 }
-.car_item{
+
+.car_item {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.content_left {
+  transition: linear .2s;
+  margin-left: 0rpx; 
+  position: relative;
+  width: 100%;
   display: flex;
   background: #fff;
   overflow: hidden;
   padding: 20rpx;
 }
-.goods_img{
+.dele_pic{
+  width: 40rpx;
+  height: 40rpx;
+}
+.content_delete{ 
+  transition: all .2s;
+  margin-left: -120rpx; 
+}
+
+.goods_img {
   width: 150rpx;
   height: 150rpx;
   float: left;
 }
-.goods_content{
+
+.goods_content {
+  position: relative;
   flex: 1;
   float: left;
   margin-left: 20rpx;
 }
-.goods_tt{
+
+.goods_tt {
   height: 40rpx;
   font-size: 28rpx;
   margin: 0 0;
 }
-.goods_desc{
+
+.goods_desc {
   margin-top: 52rpx;
   font-size: 28rpx;
 }
-.money{
+
+.money {
   font-weight: bold;
   color: red;
   float: left;
   margin-top: 24rpx;
 }
-.counter{
-   float: right; 
+
+.counter {
+  float: right;
 }
-.assum_wrapper{
-  position: fixed; 
+
+.assum_wrapper {
+  position: fixed;
   width: 100%;
   bottom: 0;
-  padding: 10rpx; 
+  padding: 10rpx;
   background: #fff;
-  font-size: 24rpx; 
+  font-size: 24rpx;
 }
-.chose_all{
+
+.dele_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0; 
+  transition: width .2s; 
+  text-align: center; 
+  color: #fff;
+  background: red;
+  overflow: hidden;
+  font-size: 24rpx;
+}
+.showDele{
+  width: 120rpx;
+  transition: width .2s;
+}
+
+.chose_all {
   height: 70rpx;
   line-height: 70rpx;
   float: left;
 }
-.assum_right{
+
+.assum_right {
   float: right;
 }
-.assum{ 
+
+.assum {
   background: rgba(255, 0, 0, 0.7);
   border-radius: 38rpx;
   color: #fff;
@@ -98,27 +153,30 @@ page{
   text-align: center;
   margin-right: 20rpx;
 }
-.assum_content{
+
+.assum_content {
   float: right;
   margin-right: 20rpx;
   text-align: right;
 }
-.assum_tip{
+
+.assum_tip {
   color: #777;
   font-size: 20rpx;
   margin-top: 10rpx;
 }
-.money_wrapper{
+
+.money_wrapper {
   font-size: 20rpx;
 }
-.ass_money{
+
+.ass_money {
   font-size: 26rpx;
   color: red;
   font-weight: bold;
 }
-.checkbox_wrapper{
+
+.checkbox_wrapper {
   line-height: 140rpx;
   margin-right: 10rpx;
 }
- 
- 
