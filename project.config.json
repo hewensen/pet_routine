@@ -230,6 +230,20 @@
 					"pathName": "pages/evaluate/evaluate",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/treatment_register/treatment_register",
+					"pathName": "pages/treatment_register/treatment_register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my_treatment/my_treatment",
+					"pathName": "pages/my_treatment/my_treatment",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

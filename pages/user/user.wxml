@@ -90,6 +90,15 @@
       </view>
     </view>
   </navigator>
+  <navigator hover-class="none" url="../../pages/my_treatment/my_treatment">
+    <view class="func_item">
+      <view class="func_inner">
+        <image class="func_pic" src="../../images/bk.png"></image>
+        <text class="func_tt">挂号记录</text>
+        <image class="func_right" src="../../images/right.png"></image>
+      </view>
+    </view>
+  </navigator>
   <view class="func_item">
     <view class="func_inner last">
       <image class="func_pic" src="../../images/f1.png"></image>

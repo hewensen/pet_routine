@@ -11,7 +11,9 @@
     <view class="goods_item" wx:key="index" wx:for="{{goodsList}}">
       <navigator hover-class="none" url="../../pages/goods_detail/goods_detail?id={{item.id}}">
         <view class="img_box">
+          <view wx:if="{{item.rest <=0}}"> 
           <emp-cover></emp-cover>
+          </view>
           <image class="goods_img" src="{{item.head_img_url}}"></image>
         </view>
         <view class="goods_name">{{item.name}}</view>

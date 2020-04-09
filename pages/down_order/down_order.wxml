@@ -3,7 +3,7 @@
 <view class="container">
   <navbar back="true" text="确认订单"></navbar>
   <view class="content">
-   <view style="top:{{height}}px" class="done_wrapper" wx:if="{{orderDone}}"></view>
+    <view style="top:{{height}}px" class="done_wrapper" wx:if="{{orderDone}}"></view>
     <view bindtap="hideWrapper" animation="{{fadeIn}}" class="cover" wx:if="{{showWrapper||showPayer}}"></view>
     <view bindtap="payNow" animation="{{moveUp}}" class="pay_wrapper" wx:if="{{showPayer}}">微信支付</view>
     <view animation="{{BeBig}}" class="address_wrapper" wx:if="{{showWrapper}}">
@@ -79,6 +79,6 @@
         <text class="money_bold">￥{{numberUtil.numberFormat(goodsInfo.price*goodsNum+dele_money)}}</text>
       </view>
     </view>
-    
+
   </view>
 </view>

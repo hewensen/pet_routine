@@ -108,6 +108,7 @@ page {
 
 .assum_wrapper {
   position: fixed;
+  z-index: 9999;
   width: 100%;
   bottom: 0;
   padding: 10rpx;

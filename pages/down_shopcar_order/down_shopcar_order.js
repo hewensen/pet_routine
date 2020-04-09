@@ -12,7 +12,11 @@ Page({
     addressList: [],
     orderListInfo: [],
     activeIndex: 0,
-    showWrapper: false
+    height: app.globalData.height + 44,
+    showWrapper: false,
+    showPayer: false,
+    orderDone: false,
+    trade_list:[]
   },
 
   /**
@@ -147,7 +151,7 @@ Page({
     })
   },
   subOrder: function(e) {
-    console.log(this.data.orderListInfo); 
+    var that =this;
     var openId = (wx.getStorageSync('openId'));
     var data = this.data;
     var address = data.addressList;
@@ -173,16 +177,25 @@ Page({
       },
       success(res) {
         var data = res.data;
-        wx.showToast({
-          title: data.msg,
-          icon: 'success',
-          duration: 2000
-        })
+        wx.hideLoading();
+        if (data.code == 1) {
+          that.showPayer();
+          that.setData({
+            orderDone: true,
+            trade_list: data.data.trade_list
+          })
+        } else {
+          wx.showToast({
+            title: data.msg,
+            icon: 'none',
+            duration: 2000
+          })
+        }
       }
     })
   },
   hideWrapper: function(e) {
-
+    var data = this.data;
     var animation = wx.createAnimation({
       duration: 300,
       timingFunction: 'ease',
@@ -194,14 +207,25 @@ Page({
       delay: 0
     });
     animation.backgroundColor("black").opacity(0).step();
-    animation2.width("70%").left("15%").opacity(0).step();
-    this.setData({
-      fadeIn: animation.export(),
-      BeBig: animation2.export()
-    })
+    if (data.showWrapper) {
+      animation2.width("70%").left("15%").opacity(0).step();
+      this.setData({
+        fadeIn: animation.export(),
+        BeBig: animation2.export()
+      })
+    } else if (data.showPayer) {
+      animation2.bottom('-100rpx').step();
+      this.setData({
+        fadeIn: animation.export(),
+        moveUp: animation2.export()
+      })
+    }
+    
+    
     setTimeout(function() {
       this.setData({
-        showWrapper: false
+        showWrapper: false,
+        showPayer: false
       })
     }.bind(this), 300)
   },
@@ -226,6 +250,27 @@ Page({
       BeBig: animation2.export()
     })
   },
+  showPayer: function (e) {
+    this.setData({
+      showPayer: true
+    })
+    var animation = wx.createAnimation({
+      duration: 300,
+      timingFunction: 'ease',
+      delay: 0
+    });
+    var animation2 = wx.createAnimation({
+      duration: 300,
+      timingFunction: 'ease',
+      delay: 0
+    });
+    animation.backgroundColor("black").opacity(0.5).step();
+    animation2.bottom('0').step();
+    this.setData({
+      fadeIn: animation.export(),
+      moveUp: animation2.export()
+    })
+  },
   choseChange: function(event) {
     var index = event.currentTarget.dataset.index;
     this.setData({
@@ -241,6 +286,45 @@ Page({
     }
     this.setData({
       sumAll: price
+    })
+  },
+  payNow: function (e) {
+    var trade_list = this.data.trade_list;
+    wx.showLoading({});
+    var openId = (wx.getStorageSync('openId'));
+    wx.request({
+      method: 'POST',
+      url: app.globalData.host + '/api/pet/order/payCarOrder',
+      data: {
+        trade_list: JSON.stringify(trade_list),
+        openId: openId
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success(res) {
+        var data = res.data;
+        wx.hideLoading();
+        if (data.code == 1) {
+          wx.showToast({
+            title: data.msg,
+            icon: 'success',
+            duration: 2000
+          })
+          setTimeout(() => {
+            var url = '../order/order?';
+            wx.redirectTo({
+              url: url
+            })
+          }, 1500);
+        } else {
+          wx.showToast({
+            title: data.msg,
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      }
     })
   }
 })

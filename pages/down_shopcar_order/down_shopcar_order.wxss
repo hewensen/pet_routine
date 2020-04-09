@@ -5,7 +5,20 @@ page {
   box-sizing: border-box;
   padding-bottom: 80rpx;
 }
-
+.pay_wrapper {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 24rpx;
+  background: #f1f1f1;
+  color: green;
+  z-index: 9;
+  bottom: -80rpx;
+}
 .content {
   padding: 16rpx; 
 }
@@ -26,7 +39,13 @@ page {
   bottom: 0;
   background: rgba(0, 0, 0, 0);
 }
-
+.done_wrapper {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 80rpx;
+  z-index: 7;  
+}
 .chose {
   background: #fff;
 }

@@ -1,0 +1,39 @@
+<!--pages/my_appoint/my_appoint.wxml-->
+<view class="container">
+  <navbar home="true" text="挂号记录"></navbar>
+  <view>
+    <view class="book_item " wx:key="index" wx:for="{{appoList}}">
+      <view class="treat_info">
+         <view class="treat_item first">
+             {{item.sname}}
+         </view>
+         <view class="treat_item second">
+            取号码：{{item.id}}
+         </view>
+      </view>
+      <view>
+        <image class="book_pic" src="/images/dog.jpg"></image>
+      </view>
+       
+      <view class="book_detail">
+        <text>{{item.name}},{{item.mobile}}</text>
+      </view>
+       <view class="book_detail">
+        <text>{{item.pet_sort}}-{{item.pet_age}}</text>
+      </view>
+      <view class="cancel_btn" data-id="{{item.id}}" bindtap="cancelBook" wx:if="{{item.status == 1}}">
+        取消
+      </view>
+      <view class="book_time">预约时间：{{item.appo_date}} {{item.appo_time}}</view> 
+       <view wx:if="{{item.status == 1}}" class="book_status blue">
+        <text>未看诊</text>
+      </view>
+      <view wx:elif="{{item.status == 2}}" class="book_status green">
+        <text>已完成</text>
+      </view>
+      <view wx:elif="{{item.status == 3}}" class="book_status red">
+        <text>已取消</text>
+      </view>
+    </view>
+  </view>
+</view>

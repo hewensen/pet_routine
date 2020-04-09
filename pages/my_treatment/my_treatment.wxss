@@ -1,0 +1,131 @@
+/* pages/my_appoint/my_appoint.wxss */
+
+page {
+  background: #f1f1f1;
+}
+.treat_info{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+.first{ 
+  border-bottom-left-radius: 16rpx;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+.second{
+  border-bottom-right-radius: 16rpx;
+}
+.treat_item{
+  font-size: 28rpx;
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  color: #fff;
+  line-height: 80rpx;
+  background: rgb(4, 196, 90); 
+}
+
+.number_wrapper{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0rpx;
+  height: 30rpx;
+}
+.book_item {
+  position: relative;
+  width: 94%;
+  margin-left: 3%;
+  height: 270rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  border: 1px solid #c1c1c1;
+}
+
+ 
+
+.title {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.book_status {
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  padding: 10rpx 16rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 20rpx;
+  font-weight: bold;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  border-bottom-left-radius: 10rpx;
+}
+
+.red {
+  background: red;
+  border-color: red;
+}
+
+.blue {
+  background: dodgerblue;
+  border-color: dodgerblue;
+}
+
+.green {
+  background: rgba(32, 197, 32, 0.849);
+  border-color: rgba(32, 197, 32, 0.849);
+}
+
+.book_detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rpx;
+  color: rgb(37, 21, 21);
+}
+
+.book_user {
+  margin-left: 30rpx;
+}
+
+.book_time {
+  float: left;
+  margin-top: 10rpx;
+  color: #999;
+}
+
+.book_pic {
+  width: 130rpx;
+  height: 130rpx;
+  float: left;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+
+.cancel_btn {
+  position: absolute;
+  right: 20rpx;
+  top: 54rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  font-size: 23rpx;
+  border: 1px solid #777;
+  text-align: center;
+  color: #777;
+}
+
+.cancel_btn:active {
+  color: #fff;
+  border: none;
+  background: dodgerblue;
+}

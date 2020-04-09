@@ -289,5 +289,6 @@ page {
   width: 100%;
   left: 0;
   bottom: 80rpx;
+  background: #000;
   z-index: 7;
 }

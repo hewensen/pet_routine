@@ -1,0 +1,58 @@
+<!--pages/appointment/appointment.wxml-->
+<view class="container">
+  <navbar home="true" text="挂号预约"></navbar>
+  <view class="inner">
+    <view class="date_list">
+      <view wx:key="index" wx:for="{{dateList}}" class="date_item {{checkedIndex==index?'checked':'unchecked'}}" data-index="{{index}}" bindtap="changeIndex">
+        <view>{{item.text}}</view>
+        <view>{{item.date}}</view>
+      </view>
+    </view>
+    <view class="time_list">
+      <view data-index="{{index}}" data-time="{{item.time}}" data-enable="{{item.enable}}" bindtap="checkTime" class="time_item {{activeTime==index?'active':''}} {{item.enable?'able':'unable'}}" wx:key="index" wx:for="{{checkedList}}">{{item.time}}</view>
+    </view>
+
+    <view class="chose_service">
+      <view class="item">
+        <image class="icon_pic" src="/images/b1.png"></image>科室选择</view>
+      <picker class="ps_input" bindchange="bindPickerChange" range="{{deleType}}">
+        <view class="picker">
+          {{deleType[checkIndex]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="chose_service3">
+      <view class="item">
+        <image class="icon_pic" src="/images/b2.png"></image>宠物品种</view>
+      <input class="ps_input" bindinput="getPetSortInput" value="{{appoInfo.pet_sort}}" placeholder="宠物品种"></input>
+    </view>
+    <view class="chose_service2">
+      <view class="item">
+        <image class="icon_pic" src="/images/b3.png"></image>宠物年龄</view>
+      <input class="ps_input" bindinput="getPetAgeInput" value="{{appoInfo.pet_age}}" placeholder="宠物年龄(如:12个月)"></input>
+    </view>
+
+    <view class="chose_service3">
+      <view class="item">
+        <image class="icon_pic" src="/images/b2.png"></image>联系人</view>
+      <input class="ps_input" bindinput="getNameInput" value="{{appoInfo.name}}" placeholder="请输入联系人姓名"></input>
+    </view>
+    <view class="chose_service2">
+      <view class="item">
+        <image class="icon_pic" src="/images/b3.png"></image>联系电话</view>
+      <input class="ps_input" bindinput="getMobileInput" value="{{appoInfo.mobile}}" placeholder="请输入联系人电话"></input>
+    </view>
+
+    <view class="book_info">
+      <view class="book_text">
+        <image class="clock" src="/images/clock.png"></image>挂号信息：
+        <text class="text">{{boook_time}}-{{deleType[checkIndex]}}<text style="margin-left:40rpx">{{appoInfo.pet_sort}}-{{appoInfo.pet_age}}</text></text>
+      </view>
+     
+    </view>
+     <view class="next_btn" bindtap="appointNow">
+        立即挂号
+      </view>
+  </view>
+</view>

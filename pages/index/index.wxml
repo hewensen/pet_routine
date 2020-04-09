@@ -46,14 +46,16 @@
         <text>洗护预约</text>
       </navigator>
     </view>
+
     <view class="menu_item">
-      <navigator hover-class="none" url="../../pages/shop_region/shop_region">
+      <navigator hover-class="none" url="../../pages/treatment_register/treatment_register">
         <view class="circle_wrapper circle_greey">
           <image class="menu_img" src="/images/nutri.png"></image>
         </view>
-        <text>营养补充</text>
+        <text>预约挂号</text>
       </navigator>
     </view>
+
     <view class="menu_item">
       <navigator hover-class="none" url="../../pages/shop_region/shop_region?type=4">
         <view class="circle_wrapper circle_purple">

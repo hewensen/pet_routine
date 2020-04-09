@@ -20,7 +20,9 @@
     "pages/order_detail_dele/order_detail_dele",
     "pages/order_detail_finish/order_detail_finish",
     "components/ranker/ranker",
-    "pages/evaluate/evaluate"
+    "pages/evaluate/evaluate",
+    "pages/treatment_register/treatment_register",
+    "pages/my_treatment/my_treatment"
   ],
   "permission": {
     "scope.userLocation": {
