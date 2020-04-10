@@ -2,14 +2,18 @@
 <view class="container">
   <navbar home="true" text="我的预约"></navbar>
   <view>
-    <view class="book_item {{item.status==1?'border_blue':item.status==2?'border_green':'border_red'}}" wx:key="index" wx:for="{{appoList}}">
+    <view class="book_item  " wx:key="index" wx:for="{{appoList}}">
+      <view class="treat_info">
+         <view class="treat_item first">
+             {{item.sname}}
+         </view>
+         <view class="treat_item second">
+            洗护码：{{item.id}}
+         </view>
+      </view>
       <view>
         <image class="book_pic" src="/images/dog.jpg"></image>
-      </view>
-      <view class="book_detail">
-        <text wx:if="{{item.type ==1}}" class="title">宠物美容</text>
-        <text wx:elif="{{item.type ==2}}" class="title">修毛裁剪</text>
-      </view>
+      </view> 
       <view class="book_detail">
         <text>{{item.name}},{{item.mobile}}</text>
       </view>
@@ -17,16 +21,14 @@
         取消
       </view>
       <view class="book_time">预约时间：{{item.appo_date}} {{item.appo_time}}</view>
-      <view wx:if="{{item.status == 1}}" class="book_status red">
-        <text>待付款</text>
-      </view>
-       <view wx:if="{{item.status == 2}}" class="book_status blue">
+      
+       <view wx:if="{{item.status == 1}}" class="book_status blue">
         <text>待服务</text>
       </view>
-      <view wx:elif="{{item.status == 3}}" class="book_status green">
+      <view wx:elif="{{item.status == 2}}" class="book_status green">
         <text>已完成</text>
       </view>
-      <view wx:elif="{{item.status == 4}}" class="book_status red">
+      <view wx:elif="{{item.status == 3}}" class="book_status red">
         <text>已取消</text>
       </view>
     </view>

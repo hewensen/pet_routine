@@ -29,6 +29,9 @@
   <view class="asset_wrapper">
     <view class="asset_title">
       <text>宝贝评价</text>
+      <text class="evaluates"><text class="asset_item">好评 {{assetList[0]}}</text>
+      <text class="asset_item">中评 {{assetList[1]}}</text>
+      <text class="asset_item">差评 {{assetList[2]}}</text></text>
     </view>
   </view>
   <switcher orderList="{{orderList}}" imgList="{{goodsInfo.detail_img_url}}"></switcher>

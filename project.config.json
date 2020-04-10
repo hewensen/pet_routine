@@ -244,6 +244,12 @@
 					"pathName": "pages/my_treatment/my_treatment",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods_detail/goods_detail",
+					"pathName": "pages/goods_detail/goods_detail",
+					"scene": null
 				}
 			]
 		}

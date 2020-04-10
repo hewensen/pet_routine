@@ -11,7 +11,8 @@ Page({
     goodsNum: 0,
     goodsId: 8,
     goodsInfo: {},
-    orderList: []
+    orderList: [],
+    assetList:[]
   },
 
   /**
@@ -36,7 +37,8 @@ Page({
         });
         that.setData({
           goodsInfo: res.data.goods_info,
-          orderList: orderList
+          orderList: orderList,
+          assetList: res.data.asset_list
         })
       }
     })

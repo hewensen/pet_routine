@@ -3,10 +3,33 @@
 page {
   background: #f1f1f1;
 }
-
+.treat_info{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+.first{ 
+  border-bottom-left-radius: 16rpx;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+.second{
+  border-bottom-right-radius: 16rpx;
+}
+.treat_item{
+  font-size: 28rpx;
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  color: #fff;
+  line-height: 80rpx;
+  background: rgb(4, 196, 90); 
+}
 .book_item {
   position: relative;
   width: 94%;
+  height: 270rpx;
   margin-left: 3%;
   overflow: hidden;
   box-sizing: border-box;
@@ -15,6 +38,7 @@ page {
   border-radius: 16rpx;
   margin-top: 20rpx;
   font-size: 24rpx;
+  border: 1px solid #c1c1c1;
 }
 
 .border_red {
@@ -86,6 +110,7 @@ page {
   float: left;
   border-radius: 20rpx;
   margin-right: 20rpx;
+  border:2px solid #f1f1f1;
 }
 
 .cancel_btn {

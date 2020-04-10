@@ -3,7 +3,13 @@
 page {
   background: #f1f1f1;
 }
-
+.evaluates{
+  float: right; 
+  margin-right: 40rpx;
+}
+.asset_item{
+  margin-left: 20rpx;
+}
 .swiper {
   width: 100%;
   display: flex;
